@@ -1,21 +1,4 @@
-/*
- *  This file is part of BlackHole (https://github.com/Sangwan5688/BlackHole).
- * 
- * BlackHole is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * BlackHole is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public License
- * along with BlackHole.  If not, see <http://www.gnu.org/licenses/>.
- * 
- * Copyright (c) 2021-2022, Ankit Sangwan
- */
+
 
 import 'dart:io';
 
@@ -3635,7 +3618,7 @@ class _SettingPageState extends State<SettingPage> {
                             Share.share(
                               '${AppLocalizations.of(
                                 context,
-                              )!.shareAppText}: https://github.com/Sangwan5688/BlackHole',
+                              )!.shareAppText}: https://github.com/Black-box-studio',
                             );
                           },
                           dense: true,
@@ -3651,13 +3634,13 @@ class _SettingPageState extends State<SettingPage> {
                             AppLocalizations.of(
                               context,
                             )!
-                                .buyCoffee,
+                                .insta,
                           ),
                           dense: true,
                           onTap: () {
                             launchUrl(
                               Uri.parse(
-                                'https://www.buymeacoffee.com/ankitsangwan',
+                                'https://instagram.com/studio.cinecraft',
                               ),
                               mode: LaunchMode.externalApplication,
                             );
@@ -3680,7 +3663,7 @@ class _SettingPageState extends State<SettingPage> {
                           isThreeLine: true,
                           onTap: () {
                             const String upiUrl =
-                                'upi://pay?pa=ankit.sangwan.5688@oksbi&pn=BlackHole';
+                                'upi://pay?pa=vinothvin8012-1@oksbi&pn=BlackHole';
                             launchUrl(
                               Uri.parse(upiUrl),
                               mode: LaunchMode.externalApplication,
@@ -3689,7 +3672,7 @@ class _SettingPageState extends State<SettingPage> {
                           onLongPress: () {
                             copyToClipboard(
                               context: context,
-                              text: 'ankit.sangwan.5688@oksbi',
+                              text: 'vinothvin8012-1@oksbi',
                               displayText: AppLocalizations.of(
                                 context,
                               )!
@@ -3706,7 +3689,7 @@ class _SettingPageState extends State<SettingPage> {
                             onPressed: () {
                               copyToClipboard(
                                 context: context,
-                                text: 'ankit.sangwan.5688@oksbi',
+                                text: 'vinothvin8012-1@oksbi',
                                 displayText: AppLocalizations.of(
                                   context,
                                 )!
@@ -3765,7 +3748,7 @@ class _SettingPageState extends State<SettingPage> {
                                                 Navigator.pop(context);
                                                 launchUrl(
                                                   Uri.parse(
-                                                    'https://mail.google.com/mail/?extsrc=mailto&url=mailto%3A%3Fto%3Dblackholeyoucantescape%40gmail.com%26subject%3DRegarding%2520Mobile%2520App',
+                                                    'studio.cinecraft@gmail.com',
                                                   ),
                                                   mode: LaunchMode
                                                       .externalApplication,
@@ -3827,7 +3810,7 @@ class _SettingPageState extends State<SettingPage> {
                                                 Navigator.pop(context);
                                                 launchUrl(
                                                   Uri.parse(
-                                                    'https://instagram.com/sangwan5688',
+                                                    'https://instagram.com/studio.cinecraft',
                                                   ),
                                                   mode: LaunchMode
                                                       .externalApplication,
@@ -3921,7 +3904,7 @@ class _SettingPageState extends State<SettingPage> {
                                                 Navigator.pop(context);
                                                 launchUrl(
                                                   Uri.parse(
-                                                    'https://t.me/blackhole_official',
+                                                    'https://t.me/cinecraft.studio',
                                                   ),
                                                   mode: LaunchMode
                                                       .externalApplication,
