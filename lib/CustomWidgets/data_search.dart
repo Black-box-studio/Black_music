@@ -1,5 +1,5 @@
 /*
- *  This file is part of BlackHole (https://github.com/Sangwan5688/BlackHole).
+ *  This file is part of BlackHole (https://github.com/Black-box-studio/Black_music).
  * 
  * BlackHole is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with BlackHole.  If not, see <http://www.gnu.org/licenses/>.
  * 
- * Copyright (c) 2021-2022, Ankit Sangwan
+ * Copyright (c) 2021-2025, cinecraft studio 
  */
 
 import 'dart:io';
