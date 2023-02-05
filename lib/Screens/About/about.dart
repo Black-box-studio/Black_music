@@ -146,7 +146,7 @@ class _AboutScreenState extends State<AboutScreen> {
                       onPressed: () {
                         launchUrl(
                           Uri.parse(
-                            'https://www.buymeacoffee.com/ankitsangwan',
+                            'https://instagram.com/studio.cinecraft?igshid=ZDdkNTZiNTM=',
                           ),
                           mode: LaunchMode.externalApplication,
                         );
