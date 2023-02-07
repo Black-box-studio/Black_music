@@ -1,21 +1,3 @@
-/*
- *  This file is part of BlackHole (https://github.com/Sangwan5688/BlackHole).
- * 
- * BlackHole is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * BlackHole is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public License
- * along with BlackHole.  If not, see <http://www.gnu.org/licenses/>.
- * 
- * Copyright (c) 2021-2022, Ankit Sangwan
- */
 
 import 'dart:async';
 import 'dart:io';
@@ -74,22 +56,22 @@ Future<void> main() async {
 
 Future<void> setOptimalDisplayMode() async {
   await FlutterDisplayMode.setHighRefreshRate();
-  // final List<DisplayMode> supported = await FlutterDisplayMode.supported;
-  // final DisplayMode active = await FlutterDisplayMode.active;
+  final List<DisplayMode> supported = await FlutterDisplayMode.supported;
+  final DisplayMode active = await FlutterDisplayMode.active;
 
-  // final List<DisplayMode> sameResolution = supported
-  //     .where(
-  //       (DisplayMode m) => m.width == active.width && m.height == active.height,
-  //     )
-  //     .toList()
-  //   ..sort(
-  //     (DisplayMode a, DisplayMode b) => b.refreshRate.compareTo(a.refreshRate),
-  //   );
+   final List<DisplayMode> sameResolution = supported
+       .where(
+         (DisplayMode m) => m.width == active.width && m.height == active.height,
+      )
+       .toList()
+     ..sort(
+      (DisplayMode a, DisplayMode b) => b.refreshRate.compareTo(a.refreshRate),
+    );
 
-  // final DisplayMode mostOptimalMode =
-  //     sameResolution.isNotEmpty ? sameResolution.first : active;
+   final DisplayMode mostOptimalMode =
+      sameResolution.isNotEmpty ? sameResolution.first : active;
 
-  // await FlutterDisplayMode.setPreferredMode(mostOptimalMode);
+   await FlutterDisplayMode.setPreferredMode(mostOptimalMode);
 }
 
 Future<void> startService() async {
@@ -102,7 +84,7 @@ Future<void> startService() async {
       androidNotificationIcon: 'drawable/ic_stat_music_note',
       androidShowNotificationBadge: true,
       androidStopForegroundOnPause: false,
-      // Hive.box('settings').get('stopServiceOnPause', defaultValue: true) as bool,
+      Hive.box('settings').get('stopServiceOnPause', defaultValue: true) as bool,
       notificationColor: Colors.grey[900],
     ),
   );
@@ -126,7 +108,7 @@ Future<void> openHiveBox(String boxName, {bool limit = false}) async {
     await Hive.openBox(boxName);
     throw 'Failed to open $boxName Box\nError: $error';
   });
-  // clear box if it grows large
+  //clear box if it grows large
   if (limit && box.length > 500) {
     box.clear();
   }

@@ -355,7 +355,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                     ),
-                  ),
+                  ), 
                 ),
                 SliverList(
                   delegate: SliverChildListDelegate(
@@ -423,6 +423,19 @@ class _HomePageState extends State<HomePage> {
                         onTap: () {
                           Navigator.pop(context);
                           Navigator.pushNamed(context, '/playlists');
+                        },
+                      ),
+                      ListTile(
+                        title: Text(AppLocalizations.of(context)!. Movies),
+                        contentPadding:
+                            const EdgeInsets.symmetric(horizontal: 20.0),
+                        leading: Icon(
+                          Icons.play_arrow_rounded,
+                          color: Theme.of(context).iconTheme.color,
+                        ),
+                        onTap: () {
+                          Navigator.pop(context);
+                          Navigator.pushNamed(context, '/Movies');
                         },
                       ),
                       ListTile(
